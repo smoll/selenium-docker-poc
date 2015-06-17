@@ -3,13 +3,14 @@ machine:
     - docker
 
 dependencies:
-  pre:
-    - bundle
   override:
-    - docker info
+    - bundle install
 
 test:
   override:
-    - bundle exec rspec
+    - bundle exec rspec -f JUnit -o results.xml
+  post:
+    - mkdir -p $CIRCLE_TEST_REPORTS/rspec/
+    - find . -type f -name "results.xml" -exec cp {} $CIRCLE_TEST_REPORTS/rspec/ \;
 
 # TODO: add deployment to docker hub when this is ready https://circleci.com/docs/docker
