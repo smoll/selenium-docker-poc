@@ -22,11 +22,15 @@ describe "Dockerfile" do
     expect(os_version).to include "Ubuntu 14"
   end
 
-  xit "installs required packages" do
-    expect(package("phantomjs")).to be_installed
+  it "installs the right version of phantomjs" do
+    expect(phantomjs_version).to eq "1.9.7"
   end
 
   def os_version
     command("lsb_release -a").stdout
+  end
+
+  def phantomjs_version
+    command("phantomjs --version").stdout.strip
   end
 end
