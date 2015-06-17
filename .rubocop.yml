@@ -12,3 +12,6 @@ Style/Documentation:
 
 Style/FileName:
   Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false

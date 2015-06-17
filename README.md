@@ -1,7 +1,7 @@
 selenium-docker-poc
 ===
 
-[![Circle CI](https://circleci.com/gh/smoll/selenium-docker-poc.svg?style=svg)](https://circleci.com/gh/smoll/selenium-docker-poc)
+[![Circle CI](https://circleci.com/gh/smoll/selenium-docker-poc.svg?style=svg)](https://circleci.com/gh/smoll/selenium-docker-poc) [![Coverage Status](https://coveralls.io/repos/smoll/selenium-docker-poc/badge.svg)](https://coveralls.io/r/smoll/selenium-docker-poc)
 
 Attempting to TDD a Dockerfile for use in parallel browser testing
 
