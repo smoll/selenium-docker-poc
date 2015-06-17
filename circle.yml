@@ -3,11 +3,13 @@ machine:
     - docker
 
 dependencies:
+  pre:
+    - bundle
   override:
     - docker info
 
 test:
   override:
-    - rspec
+    - bundle exec rspec
 
 # TODO: add deployment to docker hub when this is ready https://circleci.com/docs/docker
